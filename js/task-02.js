@@ -4,18 +4,15 @@ const ingredients = [
   'Garlic',
   'Tomatos',
   'Herbs',
-  'Condiments',
+  'Condiments'
 ];
 
 const ingredientsList = document.querySelector("#ingredients")
 
+
 for (let i = 0; i < ingredients.length; i++) {
-  const ingredientsListItem = document.createElement("li")
-  ingredientsListItem.class = "item"
+  const ingredientsListItem = document.createElement("li");
+  ingredientsListItem.classList.add("item");
   ingredientsListItem.textContent = ingredients[i];
-  ingredientsList.appendChild(ingredientsListItem)
-
+  ingredientsList.appendChild(ingredientsListItem);
 }
-
-
-

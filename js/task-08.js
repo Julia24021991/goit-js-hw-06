@@ -1,3 +1,4 @@
+
 const registerForm = document.querySelector('.login-form');
 
 registerForm.addEventListener('submit', handleSubmit);
@@ -9,9 +10,15 @@ function handleSubmit(event) {
     const passwordInput = form.elements.password.value;
 
     if (emailInput === '' || passwordInput === '') {
-        return alert("Please fill in all the fields!");
+        alert("Please fill in all the fields!");
+        return;
     }
 
-    console.log(emailInput, passwordInput);
+    const user = {
+        email: emailInput,
+        password: passwordInput
+    };
+
+    console.log(user);
     form.reset();
 }

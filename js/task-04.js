@@ -14,5 +14,5 @@ function decreaseCounter() {
     counterValueStart.innerHTML = counterValue;
 }
 
-
-
+btnIsPositive.addEventListener("click", increaseCounter);
+btnIsNegative.addEventListener("click", decreaseCounter);

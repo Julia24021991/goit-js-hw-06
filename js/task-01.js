@@ -1,23 +1,16 @@
-const categoriesList = document.querySelector("#categories");
+const categoriesList = document.getElementById("categories");
 
-const categoriesListItem = document.querySelectorAll(".item");
+const categoriesListItem = document.getElementsByClassName("item")
 
-console.log(`Number of categories: ${categoriesListItem.length}`)
+console.log(`Number of categories: ${categoriesListItem.length}`);
 
-categoriesListItem.forEach(
-    category => {
-        const categoryName = category.querySelector("h2");
-        const categoryItem = category.querySelectorAll("li");
+Array.from(categoriesListItem).forEach(category => {
+    const categoryName = category.getElementsByTagName("h2")[0];
+    const categoryItems = category.getElementsByTagName("li");
 
-        console.log(`Category: ${categoryName.textContent}`)
-        console.log(`Elements: ${categoryItem.length}`)
-    }
-)
-
-
-
-
-
+    console.log(`Category: ${categoryName.textContent}`);
+    console.log(`Elements: ${categoryItems.length}`);
+});
 
 
 

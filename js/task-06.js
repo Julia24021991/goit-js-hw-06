@@ -7,7 +7,9 @@ inputElement.addEventListener("blur", () => {
 
     if (inputValue.length === parseInt(expectedLength)) {
         inputElement.classList.add("valid");
+        inputElement.classList.remove("invalid");
     } else {
         inputElement.classList.add("invalid");
+        inputElement.classList.remove("valid");
     }
 });
